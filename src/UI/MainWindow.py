@@ -1,11 +1,9 @@
 #!/usr/bin/python
-import tkinter
-from .settings import window_name, frame_size
+from tkinter import Tk, scrolledtext
+
+from src.UI.settings import window_name, frame_size
+import src.UI.FileRenamer
 
 
 def create_window():
-    main_frame = tkinter.Tk()
-    main_frame.title(window_name)
-    main_frame.geometry(frame_size)
-    # Code to add widgets will go here...
-    main_frame.mainloop()
+    src.UI.FileRenamer.vp_start_gui()
